@@ -1,9 +1,11 @@
-import { Box, Heading, Link, Badge, Button, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, Link, Badge, Button, Stack, Text, useColorModeValue } from "@chakra-ui/react";
 
 export default function ServiceComponent(props) {
+    const bg = useColorModeValue("gray.200", "gray.700");
+
     return (
         <Box
-            bg="gray.700"
+            bg={bg}
             rounded="lg"
             p={4}
             maxW={{ base: "100%", sm: '390px' }}

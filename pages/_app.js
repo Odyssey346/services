@@ -2,23 +2,23 @@ import '../styles/globals.css'
 
 import { ChakraProvider, extendTheme, DarkMode } from '@chakra-ui/react'
 
-const config = {
+const theme = extendTheme({
   initialColorMode: 'dark',
-  useSystemColorMode: false,
+  useSystemColorMode: true,
   fonts: {
-    body: `'Lato', sans-serif`
+    heading: `'Lato', sans-serif`,
+    body: `'Lato', sans-serif`,
+    button: `'Lato', sans-serif`,
   }
-}
-
-const theme = extendTheme({ config })
+})
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider theme={theme}>
-      <DarkMode>
+    <DarkMode>
+      <ChakraProvider theme={theme}>
         <Component {...pageProps} />
-      </DarkMode>
-    </ChakraProvider>
+      </ChakraProvider>
+    </DarkMode>
   )
 }
 
