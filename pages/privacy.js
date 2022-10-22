@@ -1,9 +1,11 @@
 import Navbar from "../components/Navbar"
 import { Heading, Text, Link, Button } from "@chakra-ui/react"
+import SEO from "../components/SEO"
 
 export default function Privacy() {
     return (
         <div className="container">
+            <SEO title="Privacy Policy" description="Odyssey346's Services Privacy Policy" url="https://services.odyssey346.dev/privacy"/>
             <Navbar />
             <Heading m={4}>Privacy Policy</Heading>
             <Heading size="md" m={4}>Last updated: 22.10.2022</Heading>

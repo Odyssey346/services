@@ -4,10 +4,12 @@ import { HStack, Heading, SimpleGrid, Link, Text, Highlight, Button } from '@cha
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import ServiceComponent from '../components/Service'
 import Navbar from '../components/Navbar'
+import SEO from '../components/SEO'
 
 export default function Home(props) {
   return (
     <div className="container">
+        <SEO title="Home" description="Odyssey346's Services" url="https://services.odyssey346.dev/"/>
         <Navbar />
 
         <Text size="md" ml={4}>
