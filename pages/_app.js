@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 
 import { ChakraProvider, extendTheme, DarkMode } from '@chakra-ui/react'
+import NextNProgress from 'nextjs-progressbar'
 
 const theme = extendTheme({
   initialColorMode: 'dark',
@@ -14,11 +15,14 @@ const theme = extendTheme({
 
 function MyApp({ Component, pageProps }) {
   return (
-    <DarkMode>
-      <ChakraProvider theme={theme}>
-        <Component {...pageProps} />
-      </ChakraProvider>
-    </DarkMode>
+    <>
+      <NextNProgress />
+      <DarkMode>
+        <ChakraProvider theme={theme}>
+          <Component {...pageProps} />
+        </ChakraProvider>
+      </DarkMode>
+    </>
   )
 }
 
